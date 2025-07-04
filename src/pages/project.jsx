@@ -42,7 +42,7 @@ const Projects = () => (
       </div>
 
       <div className="bg-[#0f172a] p-6 rounded-xl border border-gray-700 shadow text-left">
-          <h3 className="text-xl font-bold mb-2">Ping - Pong</h3>
+          <h3 className="text-xl font-bold mb-2">Ping-Pong</h3>
           <p className="text-gray-400 mb-4">A two-player dice game built with HTML, CSS & JavaScript. First to reach 100 points wins.</p>
           <div className="flex gap-3 flex-wrap">
             <a
