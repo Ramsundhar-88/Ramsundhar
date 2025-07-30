@@ -1,20 +1,184 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Code, Server, Database, Rocket, Wrench } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Tailwind", "Express", "JWT","Python","Java"];
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: <Code />,
+    color: "from-purple-500 to-pink-500",
+    skills: [
+      {
+        name: "HTML",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      },
+      {
+        name: "CSS",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
+      {
+        name: "JavaScript",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "React",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "Tailwind",
+        logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    icon: <Server />,
+    color: "from-blue-500 to-cyan-500",
+    skills: [
+      {
+        name: "Node.js",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        name: "Express",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg",
+      },
+      {
+        name: "JWT",
+        logo: "https://img.icons8.com/color/512w/java-web-token.png",
+      },
+      {
+        name: "Python",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
+    ],
+  },
+  {
+    title: "Database",
+    icon: <Database />,
+    color: "from-emerald-500 to-teal-500",
+    skills: [
+      {
+        name: "MongoDB",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      },
+      {
+        name: "MySQL",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      },
+    ],
+  },
+  {
+    title: "Other",
+    icon: <Rocket />,
+    color: "from-orange-500 to-red-500",
+    skills: [
+      {
+        name: "Java",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      },
+      {
+        name: "Git",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      },
+      {
+        name: "API Development",
+        logo: "https://cdn-icons-png.flaticon.com/512/6460/6460629.png",
+      },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    icon: <Wrench />,
+    color: "from-yellow-400 to-orange-400",
+    skills: [
+      {
+        name: "Vercel",
+        logo: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg",
+      },
+      {
+        name: "VSCode",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+      },
+      {
+        name: "Postman",
+        logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+      },
+      {
+        name: "Render",
+        logo: "https://pbs.twimg.com/profile_images/1735429515541938176/zOO1N7Su_400x400.jpg",
+      },
+      {
+        name: "Figma",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      },
+      {
+        name: "Netlify",
+        logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg",
+      },
+    ],
+  },
+];
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <section id="skills" className="py-20 px-6 bg-[#1e293b] text-center">
-      <h2 className="text-3xl font-semibold text-white mb-8">Skills</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-        {skills.map((skill) => (
-          <div
-            key={skill}
-            className="bg-[#0f172a] text-gray-300 border border-gray-700 rounded-xl p-4 hover:border-indigo-500 transition"
-          >
-            {skill}
-          </div>
-        ))}
+    <section id="skills" className=" py-20 px-4 text-white bg-[#1e293b]">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Skills & Technologies
+            </span>
+          </h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-4">
+          {skillCategories.map((category, categoryIndex) => (
+            <div
+              key={categoryIndex}
+              data-aos="fade-up"
+              className="group bg-white/5 backdrop-blur-2xl rounded-3xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:transform hover:scale-[1.02]"
+            >
+              <div className="text-center mb-6">
+                <div
+                  className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} text-white text-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white">{category.title}</h3>
+              </div>
+
+              <div className="space-y-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="bg-white/5  rounded-xl p-4 text-center text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 transform hover:scale-[1.02] cursor-pointer"
+                    style={{
+                      animationDelay: `${(categoryIndex * 100) + (skillIndex * 50)}ms`,
+                    }}
+                  >
+                    <div className="flex items-center justify-center gap-3">
+                      <img
+                        src={skill.logo}
+                        alt={skill.name}
+                        className={`h-6 sm:h-8 w-auto object-contain ${
+                          skill.name === "Express" ? "brightness-200" : ""
+                        }`}
+                      />
+                      <span className="text-sm">{skill.name}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
