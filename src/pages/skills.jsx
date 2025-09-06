@@ -29,6 +29,11 @@ const skillCategories = [
         name: "Tailwind",
         logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       },
+      {
+        name:"Next.js",
+        logo:"https://www.svgrepo.com/show/354113/nextjs-icon.svg"
+
+      }
     ],
   },
   {
