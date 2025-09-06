@@ -29,10 +29,10 @@ const Projects = () => (
       </div>
 
       <div className="bg-[#0f172a] p-6 rounded-xl border border-gray-700 shadow text-left">
-        <h3 className="text-xl font-bold mb-2">Epic Food Fails</h3>
-        <p className="text-gray-400 mb-4">MERN-based bizarre food combo explorer. Users rate, submit, and explore fun food disasters.</p>
+        <h3 className="text-xl font-bold mb-2">Ai-Dream-analyzer</h3>
+        <p className="text-gray-400 mb-4">DreamRoast is a fun yet insightful AI app that lets users share their dreams and receive their rost or psychological-style analysis</p>
         <a
-          href="https://github.com/kalviumcommunity/S74_A_Recipe_for_Disaster.git"
+          href="https://github.com/Ramsundhar-88/Dream-analyzer.git"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-indigo-400 border border-indigo-500 px-4 py-2 rounded hover:bg-indigo-500 hover:text-white text-sm"
