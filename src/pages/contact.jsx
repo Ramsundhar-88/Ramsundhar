@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Contact = () => (
   <section id="contact" className="py-20 px-4 bg-[#0f172a] text-center text-white">
-    <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
+    <h2 className="text-3xl font-semibold mb-6 animate-pulse">Get in Touch</h2>
     <p className="text-gray-400 mb-8">Let’s connect on social media or drop a message!</p>
     <div className="flex justify-center gap-6 text-3xl text-gray-300">
       <a href="https://github.com/ramsundhar-88" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaGithub /></a>

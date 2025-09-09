@@ -98,30 +98,18 @@ const skillCategories = [
     icon: <Wrench />,
     color: "from-yellow-400 to-orange-400",
     skills: [
-      {
-        name: "Vercel",
-        logo: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg",
-      },
-      {
-        name: "VSCode",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-      },
+
+
       {
         name: "Postman",
         logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
       },
-      {
-        name: "Render",
-        logo: "https://pbs.twimg.com/profile_images/1735429515541938176/zOO1N7Su_400x400.jpg",
-      },
+
       {
         name: "Figma",
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
       },
-      {
-        name: "Netlify",
-        logo: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg",
-      },
+
     ],
   },
 ];

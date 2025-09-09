@@ -10,10 +10,12 @@ const Home = () => (
       <img
         src={profileImage}
         alt="Ram Sundhar"
-        className="w-48 md:w-64 h-48 md:h-64 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-600 shadow-2xl"
+        className="w-48 md:w-64 h-48 md:h-64 rounded-full mx-auto mb-6 object-cover border-4 border-amber-500 shadow-2xl"
       />
       <h1 className="text-4xl md:text-5xl font-bold mb-3">
-        Hi, I'm Ramsundhar
+        Hi, I'm <span className="text-amber-500">
+          Ramsundhar
+          </span> 
       </h1>
       <p className="text-base md:text-xl text-gray-300 max-w-xl mx-auto">
         Crafting full-stack web experiences that are fast, elegant, and built to scale.
