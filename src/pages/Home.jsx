@@ -11,7 +11,7 @@ export default function Portfolio() {
             {/* Profile Image */}
             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-50 md:h-50 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0">
               <img 
-                src="/Ramsundhar2.jpeg" 
+                src="/Ramsundhar.jpeg" 
                 alt="Ramsundhar" 
                 className="w-full h-full object-cover"
               />
@@ -36,7 +36,7 @@ export default function Portfolio() {
         {/* Contact Links */}
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-gray-400 mb-12 pb-6 border-b border-gray-800">
           <a href="mailto:ramsundhar.sades@gmail.com" className="flex items-center justify-center sm:justify-start gap-2 hover:text-white transition-colors break-all">
-            <Mail className="w-4 h-4 shrink-0" />
+            <Mail className="w-4 h-4 shrink-0 text-red-400" />
             <span className="break-all text-center sm:text-left">ramsundhar.sades@gmail.com</span>
           </a>
           <a href="https://github.com/Ramsundhar-88" className="flex items-center justify-center sm:justify-start gap-2 hover:text-white transition-colors">
