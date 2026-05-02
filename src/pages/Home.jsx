@@ -9,7 +9,7 @@ export default function Portfolio() {
         <div className="flex flex-col sm:flex-row items-start justify-between mb-8 gap-6">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
             {/* Profile Image */}
-            <div className="w-50 h-50 sm:w-50 sm:h-50 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-50 md:h-50 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0">
               <img 
                 src="/Ramsundhar2.jpeg" 
                 alt="Ramsundhar" 
@@ -34,10 +34,10 @@ export default function Portfolio() {
         </div>
 
         {/* Contact Links */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-gray-400 mb-12 pb-6 border-b border-gray-800">
-          <a href="mailto:ramsundhar.sades@gmail.com" className="flex items-center justify-center sm:justify-start gap-2 hover:text-white transition-colors">
-            <Mail className="w-4 h-4" />
-            <span className="truncate">ramsundhar.sades@gmail.com</span>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-gray-400 mb-12 pb-6 border-b border-gray-800">
+          <a href="mailto:ramsundhar.sades@gmail.com" className="flex items-center justify-center sm:justify-start gap-2 hover:text-white transition-colors break-all">
+            <Mail className="w-4 h-4 shrink-0" />
+            <span className="break-all text-center sm:text-left">ramsundhar.sades@gmail.com</span>
           </a>
           <a href="https://github.com/Ramsundhar-88" className="flex items-center justify-center sm:justify-start gap-2 hover:text-white transition-colors">
             <Github className='w-4 h-4'/>
@@ -83,15 +83,15 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div className="space-y-8 pl-8 sm:pl-10 border-l-2 border-zinc-800 ml-8 relative">
+              <div className="space-y-8 pl-6 sm:pl-10 border-l-2 border-zinc-800 ml-4 sm:ml-8 relative">
                 {/* Role 1 */}
                 <div className="relative">
-                  <div className="absolute w-3 h-3 bg-green-400 rounded-full -left-[2.4rem] sm:-left-[2.9rem] top-1.5" />
+                  <div className="absolute w-3 h-3 bg-green-400 rounded-full -left-[1.9rem] sm:-left-[2.9rem] top-1.5" />
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
-                    <h4 className="text-lg font-semibold">Software Engineer <span className="text-sm font-normal text-gray-400 ml-2">Full-time</span></h4>
-                    <span className="text-sm text-gray-400 shrink-0">May 2026 - Present · 1 mo</span>
+                    <h4 className="text-base sm:text-lg font-semibold">Software Engineer <span className="text-xs sm:text-sm font-normal text-gray-400 ml-1 sm:ml-2">Full-time</span></h4>
+                    <span className="text-xs sm:text-sm text-gray-400 shrink-0">May 2026 - Present · 1 mo</span>
                   </div>
-                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5 mb-3">
+                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5 mb-3 pr-2">
                     <li>Developing and maintaining cross-platform mobile applications using Flutter</li>
                     <li>Building and integrating backend services and APIs for core product features</li>
                     <li>Designing and consuming REST APIs for seamless frontend–backend communication</li>
@@ -100,19 +100,19 @@ export default function Portfolio() {
                     <li>Contributing to production releases and continuous product improvements</li>
                   </ul>
                   <div className="flex flex-wrap gap-2 mt-3">
-                     <span className="px-3 py-1 bg-zinc-800 text-xs rounded-full">Systems Design</span>
-                     <span className="px-3 py-1 bg-zinc-800 text-xs rounded-full">Mobile Application Development</span>
+                     <span className="px-2 py-1 sm:px-3 sm:py-1 bg-zinc-800 text-xs rounded-full">Systems Design</span>
+                     <span className="px-2 py-1 sm:px-3 sm:py-1 bg-zinc-800 text-xs rounded-full">Mobile App Dev</span>
                   </div>
                 </div>
 
                 {/* Role 2 */}
                 <div className="relative">
-                  <div className="absolute w-3 h-3 bg-zinc-500 rounded-full -left-[2.4rem] sm:-left-[2.9rem] top-1.5" />
+                  <div className="absolute w-3 h-3 bg-zinc-500 rounded-full -left-[1.9rem] sm:-left-[2.9rem] top-1.5" />
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
-                    <h4 className="text-lg font-semibold">Software Engineer <span className="text-sm font-normal text-gray-400 ml-2">Internship</span></h4>
-                    <span className="text-sm text-gray-400 shrink-0">Mar 2026 - Apr 2026 · 2 mos</span>
+                    <h4 className="text-base sm:text-lg font-semibold">Software Engineer <span className="text-xs sm:text-sm font-normal text-gray-400 ml-1 sm:ml-2">Internship</span></h4>
+                    <span className="text-xs sm:text-sm text-gray-400 shrink-0">Mar 2026 - Apr 2026 · 2 mos</span>
                   </div>
-                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5">
+                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5 pr-2">
                     <li>Led development of the initial MVP using Flutter, building core features end-to-end</li>
                     <li>Designed and implemented responsive UI for key user flows</li>
                     <li>Integrated backend APIs and managed data flow within the application</li>
