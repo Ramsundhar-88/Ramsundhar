@@ -9,9 +9,9 @@ export default function Portfolio() {
         <div className="flex flex-col sm:flex-row items-start justify-between mb-8 gap-6">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
             {/* Profile Image */}
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0">
+            <div className="w-50 h-50 sm:w-50 sm:h-50 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0 mx-auto sm:mx-0">
               <img 
-                src="/ramsundhar.jpg" 
+                src="/Ramsundhar2.jpeg" 
                 alt="Ramsundhar" 
                 className="w-full h-full object-cover"
               />
@@ -20,14 +20,14 @@ export default function Portfolio() {
             {/* Profile Info */}
             <div className="flex-1 text-center sm:text-left">
               <h1 className="text-2xl sm:text-3xl font-bold mb-1">Ramsundhar</h1>
-              <p className="text-gray-400 text-base sm:text-lg mb-2">Full Stack developer</p>
+              <p className="text-gray-400 text-base sm:text-lg mb-2">Software Engineer</p>
               <div className="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-400 mb-3">
                 <MapPin className="w-4 h-4" />
                 <span>Chennai, India</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <span className="text-sm text-gray-300">Available for work</span>
+                <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                <span className="text-sm text-gray-300">Working</span>
               </div>
             </div>
           </div>
@@ -56,11 +56,72 @@ export default function Portfolio() {
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">About me</h2>
           <div className="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base">
             <p>
-              Hello, I'm Ramsundhar, a Full Stack Developer passionate about building clean, modern, and efficient web applications.
+              Hello, I'm Ramsundhar, a Software Engineer passionate about building clean, modern, and efficient web applications.
             </p>
             <p>
               I began my journey with a deep curiosity for how websites and apps work behind the scenes. Since then, I've been learning and building projects that combine strong front-end interfaces with solid back-end logic. I enjoy turning ideas into functional, user-focused digital experiences using modern web technologies.
             </p>
+          </div>
+        </section>
+
+
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Experience</h2>
+          
+          <div className="space-y-12">
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded overflow-hidden flex-shrink-0 bg-white">
+                  <img src="/drring_health_logo.jpeg" alt="DrRing Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-semibold">DrRing</h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mt-1">
+                    <MapPin className="w-4 h-4 text-blue-300" />
+                    <span>South Delhi, Delhi, India · Remote</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-8 pl-8 sm:pl-10 border-l-2 border-zinc-800 ml-8 relative">
+                {/* Role 1 */}
+                <div className="relative">
+                  <div className="absolute w-3 h-3 bg-green-400 rounded-full -left-[2.4rem] sm:-left-[2.9rem] top-1.5" />
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
+                    <h4 className="text-lg font-semibold">Software Engineer <span className="text-sm font-normal text-gray-400 ml-2">Full-time</span></h4>
+                    <span className="text-sm text-gray-400 shrink-0">May 2026 - Present · 1 mo</span>
+                  </div>
+                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5 mb-3">
+                    <li>Developing and maintaining cross-platform mobile applications using Flutter</li>
+                    <li>Building and integrating backend services and APIs for core product features</li>
+                    <li>Designing and consuming REST APIs for seamless frontend–backend communication</li>
+                    <li>Improving app performance, stability, and scalability across mobile and backend systems</li>
+                    <li>Collaborating with product and design teams to deliver end-to-end features</li>
+                    <li>Contributing to production releases and continuous product improvements</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                     <span className="px-3 py-1 bg-zinc-800 text-xs rounded-full">Systems Design</span>
+                     <span className="px-3 py-1 bg-zinc-800 text-xs rounded-full">Mobile Application Development</span>
+                  </div>
+                </div>
+
+                {/* Role 2 */}
+                <div className="relative">
+                  <div className="absolute w-3 h-3 bg-zinc-500 rounded-full -left-[2.4rem] sm:-left-[2.9rem] top-1.5" />
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
+                    <h4 className="text-lg font-semibold">Software Engineer <span className="text-sm font-normal text-gray-400 ml-2">Internship</span></h4>
+                    <span className="text-sm text-gray-400 shrink-0">Mar 2026 - Apr 2026 · 2 mos</span>
+                  </div>
+                  <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5">
+                    <li>Led development of the initial MVP using Flutter, building core features end-to-end</li>
+                    <li>Designed and implemented responsive UI for key user flows</li>
+                    <li>Integrated backend APIs and managed data flow within the application</li>
+                    <li>Built production-ready features with focus on performance and reliability</li>
+                    <li>Took ownership of major features and delivered them independently</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -131,7 +192,7 @@ export default function Portfolio() {
             <div className="border-l-2 border-zinc-800 pl-4 sm:pl-6">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
                 <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4 text-blue-300" />
                   <span>Chennai, India</span>
                 </div>
                 <span className="text-sm text-gray-400">2024 – 2028</span>
@@ -170,8 +231,8 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {/* React */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-blue-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">⚛️</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <span className="text-black font-bold text-xl"><img src="react.webp" alt="React" className="w-8 h-8" /></span>
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">React.js</h3>
@@ -192,8 +253,8 @@ export default function Portfolio() {
 
             {/* Tailwind */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-cyan-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🌬️</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/tailwindcss.webp" alt="Tailwind CSS" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">Tailwind CSS</h3>
@@ -203,8 +264,8 @@ export default function Portfolio() {
 
             {/* Node.js */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-green-600 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🟢</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/node_js.webp" alt="Node.js" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">Node.js</h3>
@@ -225,8 +286,8 @@ export default function Portfolio() {
 
             {/* MongoDB */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-emerald-600 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🍃</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/mongo-db.webp" alt="MongoDB" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">MongoDB</h3>
@@ -236,8 +297,8 @@ export default function Portfolio() {
 
             {/* SQL / MySQL */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-blue-700 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🛢️</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/MySQL-Logo.webp" alt="MySQL" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">SQL / MySQL</h3>
@@ -247,8 +308,8 @@ export default function Portfolio() {
 
             {/* Firebase */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-yellow-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🔥</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/firebase.webp" alt="Firebase" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">Firebase</h3>
@@ -258,8 +319,8 @@ export default function Portfolio() {
 
             {/* Git & GitHub */}
             <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-orange-600 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🐙</span>
+              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <img src="/Github.webp" alt="GitHub" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-base sm:text-lg font-semibold">Git & GitHub</h3>
