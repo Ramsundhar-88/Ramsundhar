@@ -1,6 +1,25 @@
 import React from 'react';
 import { Mail, MapPin, Download, ExternalLink, Github } from 'lucide-react';
 
+const calculateDuration = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+  
+  let months = (now.getFullYear() - start.getFullYear()) * 12;
+  months -= start.getMonth();
+  months += now.getMonth();
+  
+  months += 1;
+  if (months < 1) months = 1;
+
+  if (months >= 12) {
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    return `${years} yr${years > 1 ? 's' : ''}${remainingMonths > 0 ? ` ${remainingMonths} mo${remainingMonths > 1 ? 's' : ''}` : ''}`;
+  }
+  return `${months} mo${months > 1 ? 's' : ''}`;
+};
+
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -56,10 +75,10 @@ export default function Portfolio() {
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">About me</h2>
           <div className="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base">
             <p>
-              Hello, I'm Ramsundhar, a Software Engineer passionate about building clean, modern, and efficient web applications.
+              I'm Ramsundhar, a software engineer building across web and mobile — from React and Node on the frontend/backend to Flutter for cross-platform apps. Currently at DrRing, I work on Flutter apps and the backend APIs that power them, with a growing focus on system design and building things that scale cleanly as they grow.
             </p>
             <p>
-              I began my journey with a deep curiosity for how websites and apps work behind the scenes. Since then, I've been learning and building projects that combine strong front-end interfaces with solid back-end logic. I enjoy turning ideas into functional, user-focused digital experiences using modern web technologies.
+              I like owning problems end-to-end — I've taken projects from a blank repo to a working MVP, and I care as much about how a system is structured as how it looks on screen. Outside work, I build side projects like Welthy and Civic Connect to keep exploring ideas I don't get to touch day-to-day.
             </p>
           </div>
         </section>
@@ -89,7 +108,7 @@ export default function Portfolio() {
                   <div className="absolute w-3 h-3 bg-green-400 rounded-full -left-[1.9rem] sm:-left-[2.9rem] top-1.5" />
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
                     <h4 className="text-base sm:text-lg font-semibold">Software Engineer <span className="text-xs sm:text-sm font-normal text-gray-400 ml-1 sm:ml-2">Full-time</span></h4>
-                    <span className="text-xs sm:text-sm text-gray-400 shrink-0">May 2026 - Present · 1 mo</span>
+                    <span className="text-xs sm:text-sm text-gray-400 shrink-0">May 2026 - Present · {calculateDuration('2026-05-01')}</span>
                   </div>
                   <ul className="list-disc list-outside ml-4 text-gray-300 text-sm sm:text-base space-y-1.5 mb-3 pr-2">
                     <li>Developing and maintaining cross-platform mobile applications using Flutter</li>
@@ -224,108 +243,29 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Stack Section */}
-        <section className="mb-12 sm:mb-16">
-          <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Stack</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {/* React */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <span className="text-black font-bold text-xl"><img src="react.webp" alt="React" className="w-8 h-8" /></span>
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">React.js</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Frontend library for building UI.</p>
-              </div>
+        {/* Skills Section */}
+        <section id="skills" className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Skills</h2>
+          <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 border-b border-zinc-800/50 pb-4">
+              <h3 className="w-32 text-base sm:text-lg font-semibold text-gray-300 shrink-0">Frontend</h3>
+              <p className="text-sm sm:text-base text-gray-400">React.js, Next.js, Tailwind CSS</p>
             </div>
-
-            {/* Next.js */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">▲</span>
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Next.js</h3>
-                <p className="text-xs sm:text-sm text-gray-400">React framework for full-stack apps.</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 border-b border-zinc-800/50 pb-4">
+              <h3 className="w-32 text-base sm:text-lg font-semibold text-gray-300 shrink-0">Backend</h3>
+              <p className="text-sm sm:text-base text-gray-400">Node.js, Express.js</p>
             </div>
-
-            {/* Tailwind */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/tailwindcss.webp" alt="Tailwind CSS" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Tailwind CSS</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Utility-first CSS framework.</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 border-b border-zinc-800/50 pb-4">
+              <h3 className="w-32 text-base sm:text-lg font-semibold text-gray-300 shrink-0">Database</h3>
+              <p className="text-sm sm:text-base text-gray-400">MongoDB, SQL/MySQL, Firebase</p>
             </div>
-
-            {/* Node.js */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/node_js.webp" alt="Node.js" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Node.js</h3>
-                <p className="text-xs sm:text-sm text-gray-400">JavaScript backend runtime.</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 border-b border-zinc-800/50 pb-4">
+              <h3 className="w-32 text-base sm:text-lg font-semibold text-gray-300 shrink-0">Mobile</h3>
+              <p className="text-sm sm:text-base text-gray-400">Flutter, Swift</p>
             </div>
-
-            {/* Express */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-gray-700 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">🚀</span>
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Express.js</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Backend framework for APIs.</p>
-              </div>
-            </div>
-
-            {/* MongoDB */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/mongo-db.webp" alt="MongoDB" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">MongoDB</h3>
-                <p className="text-xs sm:text-sm text-gray-400">NoSQL database for scalable apps.</p>
-              </div>
-            </div>
-
-            {/* SQL / MySQL */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/MySQL-Logo.webp" alt="MySQL" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">SQL / MySQL</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Relational database & queries.</p>
-              </div>
-            </div>
-
-            {/* Firebase */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/firebase.webp" alt="Firebase" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Firebase</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Auth, DB, hosting & cloud tools.</p>
-              </div>
-            </div>
-
-            {/* Git & GitHub */}
-            <div className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                <img src="/Github.webp" alt="GitHub" className="w-8 h-8 object-contain" />
-              </div>
-              <div>
-                <h3 className="text-base sm:text-lg font-semibold">Git & GitHub</h3>
-                <p className="text-xs sm:text-sm text-gray-400">Version control & collaboration.</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 border-b border-zinc-800/50 pb-4">
+              <h3 className="w-32 text-base sm:text-lg font-semibold text-gray-300 shrink-0">Tools</h3>
+              <p className="text-sm sm:text-base text-gray-400">Git & GitHub</p>
             </div>
           </div>
         </section>
