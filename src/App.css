@@ -1,1 +1,108 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Custom outlined stroke for big typography */
+.text-stroke-title {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.6px #0f172a;
+  text-stroke: 1.6px #0f172a;
+  transition: -webkit-text-stroke-color 0.2s ease, -webkit-text-stroke-width 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .text-stroke-title {
+    -webkit-text-stroke: 2.8px #0f172a;
+    text-stroke: 2.8px #0f172a;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-stroke-title {
+    -webkit-text-stroke: 3.5px #0f172a;
+    text-stroke: 3.5px #0f172a;
+  }
+}
+
+/* Soft atmospheric cloud background matching the mockup */
+.cloud-canvas-bg {
+  background-color: #dbe0e6;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(255, 255, 255, 0.95) 0px, transparent 45%),
+    radial-gradient(at 90% 12%, rgba(205, 212, 222, 0.9) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(245, 247, 250, 0.8) 0px, transparent 60%),
+    radial-gradient(at 15% 85%, rgba(215, 222, 230, 0.9) 0px, transparent 50%),
+    radial-gradient(at 85% 88%, rgba(255, 255, 255, 0.95) 0px, transparent 45%),
+    radial-gradient(at 50% 95%, rgba(195, 203, 215, 0.8) 0px, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* WhatsApp-style repeating doodle wallpaper */
+.whatsapp-doodle-bg {
+  background-image: url('/doodle-pattern.svg');
+  background-repeat: repeat;
+  background-size: 380px 380px;
+}
+
+/* Atmospheric dark canvas background */
+.dark-canvas-bg {
+  background-color: #0c0e12;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(24, 28, 42, 0.85) 0px, transparent 45%),
+    radial-gradient(at 90% 12%, rgba(18, 22, 34, 0.9) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(12, 14, 20, 0.95) 0px, transparent 60%),
+    radial-gradient(at 15% 85%, rgba(20, 24, 36, 0.9) 0px, transparent 50%),
+    radial-gradient(at 85% 88%, rgba(28, 32, 48, 0.85) 0px, transparent 45%),
+    radial-gradient(at 50% 95%, rgba(10, 12, 18, 0.95) 0px, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Invert doodle wallpaper in dark mode */
+.dark .whatsapp-doodle-bg {
+  filter: invert(1);
+  opacity: 0.055;
+}
+
+/* Dark mode outlined stroke for big typography */
+.dark .text-stroke-title {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.6px #f8fafc;
+  text-stroke: 1.6px #f8fafc;
+}
+
+@media (min-width: 640px) {
+  .dark .text-stroke-title {
+    -webkit-text-stroke: 2.8px #f8fafc;
+    text-stroke: 2.8px #f8fafc;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dark .text-stroke-title {
+    -webkit-text-stroke: 3.5px #f8fafc;
+    text-stroke: 3.5px #f8fafc;
+  }
+}
+
+/* Hamster animation keyframes */
+@keyframes hamster-trot {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.hamster-trot {
+  animation: hamster-trot 0.35s ease-in-out infinite;
+}
