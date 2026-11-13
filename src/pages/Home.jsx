@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { 
   Mail, 
   MapPin, 
-  ExternalLink, 
   ArrowUpRight, 
   Copy, 
   Check, 
@@ -15,9 +14,8 @@ import {
   Database, 
   Wrench,
   Menu, 
-  X,
-  ChevronUp,
-  Sparkles
+  X, 
+  ChevronUp 
 } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -170,10 +168,6 @@ export default function Home() {
 
             {/* Center Navigation Links (Desktop) */}
             <nav className="hidden lg:flex items-center gap-7 xl:gap-9 text-sm font-medium text-neutral-700 dark:text-neutral-300">
-              <a href="#work" className="hover:text-black dark:hover:text-white transition-colors flex items-center gap-1 group">
-                <span>Work</span>
-                <span className="text-neutral-400 dark:text-neutral-500 text-xs font-normal group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors">[2]</span>
-              </a>
               <a href="#about" className="hover:text-black dark:hover:text-white transition-colors">
                 About
               </a>
@@ -227,14 +221,6 @@ export default function Home() {
           {/* Mobile Dropdown Nav */}
           {mobileMenuOpen && (
             <div className="lg:hidden px-4 sm:px-6 py-4 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 text-sm font-medium text-neutral-800 dark:text-neutral-200 animate-fadeIn">
-              <a 
-                href="#work" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800/80 transition-colors"
-              >
-                <span>Work</span>
-                <span className="text-neutral-400 dark:text-neutral-500 text-xs font-semibold">[2]</span>
-              </a>
               <a 
                 href="#about" 
                 onClick={() => setMobileMenuOpen(false)}
@@ -398,146 +384,6 @@ export default function Home() {
                   <span>{copied ? 'Copied Email!' : 'Copy Email'}</span>
                 </button>
 
-              </div>
-
-            </div>
-          </section>
-
-          {/* ========================================================= */}
-          {/* SELECTED WORK / PROJECTS SECTION                          */}
-          {/* ========================================================= */}
-          <section id="work" className="px-4 sm:px-8 md:px-12 py-10 sm:py-16 md:py-20 border-t border-neutral-100/90 dark:border-neutral-800/80 bg-neutral-50/40 dark:bg-neutral-950/20">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2">
-                  <Sparkles className="w-3 h-3 text-neutral-800 dark:text-neutral-200" />
-                  <span>Portfolio</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-950 dark:text-white tracking-tight">
-                  Selected Work <span className="text-neutral-400 dark:text-neutral-500 font-normal text-xl sm:text-2xl">[2]</span>
-                </h2>
-                <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-1 max-w-xl">
-                  Real-world applications built end-to-end with modern frameworks, high-performance architecture, and responsive UI.
-                </p>
-              </div>
-
-              <a 
-                href="https://github.com/Ramsundhar-88" 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-900 dark:text-white hover:text-black dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-white pb-0.5 transition-all self-start sm:self-auto group"
-              >
-                <span>View all on GitHub</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8">
-              
-              {/* Project 1: Welthy */}
-              <div className="group bg-white dark:bg-neutral-900/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-neutral-200/80 dark:border-neutral-800/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_12px_35px_rgba(0,0,0,0.4)] hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between">
-                <div>
-                  {/* Image Container */}
-                  <div className="w-full h-44 min-[400px]:h-52 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative mb-4 sm:mb-5 border border-neutral-100 dark:border-neutral-800">
-                    <img 
-                      src="/Welthy.png" 
-                      alt="Welthy Finance Tracker" 
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-700 rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm">
-                      Finance Tracker
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 dark:text-white">Welthy</h3>
-                    <a 
-                      href="https://welthy.netlify.app/" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="p-2 rounded-full border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-900 dark:hover:bg-white hover:text-white dark:hover:text-neutral-950 hover:border-neutral-900 dark:hover:border-white transition-all text-neutral-700 dark:text-neutral-300"
-                      aria-label="Open Welthy"
-                    >
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
-                    A smart personal finance and expense tracking web application. Helps users visualize monthly spending patterns, set smart savings targets, and keep tabs on daily cash flow with real-time Firebase sync.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">React</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">Firebase</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">Tailwind CSS</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">Analytics</span>
-                  </div>
-
-                  <a 
-                    href="https://welthy.netlify.app/" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white hover:bg-black dark:hover:bg-neutral-100 text-white dark:text-neutral-950 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all group-hover:shadow"
-                  >
-                    <span>Visit Live Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Project 2: Civic Connect */}
-              <div className="group bg-white dark:bg-neutral-900/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-neutral-200/80 dark:border-neutral-800/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_12px_35px_rgba(0,0,0,0.4)] hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between">
-                <div>
-                  {/* Image Container */}
-                  <div className="w-full h-44 min-[400px]:h-52 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative mb-4 sm:mb-5 border border-neutral-100 dark:border-neutral-800">
-                    <img 
-                      src="/CivicConnect.png" 
-                      alt="Civic Connect Platform" 
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm border border-neutral-200 dark:border-neutral-700 rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm">
-                      Civic Service Platform
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 dark:text-white">Civic Connect</h3>
-                    <a 
-                      href="https://civiconnect-pink.vercel.app/" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="p-2 rounded-full border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-900 dark:hover:bg-white hover:text-white dark:hover:text-neutral-950 hover:border-neutral-900 dark:hover:border-white transition-all text-neutral-700 dark:text-neutral-300"
-                      aria-label="Open Civic Connect"
-                    >
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
-                    Full-stack citizen engagement platform. Enables local community members to report civic infrastructure issues, monitor municipal resolution workflows, and communicate directly with local municipal bodies.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">MongoDB</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">Express.js</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">React</span>
-                    <span className="px-2.5 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium rounded-full">Node.js</span>
-                  </div>
-
-                  <a 
-                    href="https://civiconnect-pink.vercel.app/" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white hover:bg-black dark:hover:bg-neutral-100 text-white dark:text-neutral-950 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all group-hover:shadow"
-                  >
-                    <span>Visit Live Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
               </div>
 
             </div>
@@ -999,8 +845,9 @@ export default function Home() {
             <p>© {new Date().getFullYear()} Ramsundhar. All rights reserved.</p>
 
             <div className="flex items-center gap-4">
-              <a href="#work" className="hover:text-black dark:hover:text-white transition-colors">Work</a>
+              <a href="#about" className="hover:text-black dark:hover:text-white transition-colors">About</a>
               <a href="#experience" className="hover:text-black dark:hover:text-white transition-colors">Experience</a>
+              <a href="#skills" className="hover:text-black dark:hover:text-white transition-colors">Skills</a>
               <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">Contact</a>
             </div>
           </footer>
